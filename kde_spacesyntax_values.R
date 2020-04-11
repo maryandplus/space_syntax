@@ -79,5 +79,5 @@ st_crs(osm_points.sf) <- 25832
 ppp_landuse <- as.ppp(osm_points.sf$geometry)
 
 land_use <-density(ppp_landuse,sigma=300,eps=c(50,50))
-r_landuse <- raster(land_use,nrows=1974, ncols=1265,crs='+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs')
+r_landuse <- raster(land_use,crs='+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs')
 writeRaster(r_landuse,'landuse.tif',options=c('TFW=YES'))
