@@ -74,7 +74,7 @@ writeRaster(r_int10k,'int10k.tif',options=c('TFW=YES'))
 
 
 #land use points
-osm_points.sf <- st_read(dsn="C:/Users/alepo/Desktop/kob_osm_places_shp/osm_kob_all.shp", layer="osm_kob_all")
+osm_points.sf <- st_read(dsn="xxxxxxxxxx/osm_kob_all.shp", layer="osm_kob_all")
 st_crs(osm_points.sf) <- 25832 
 ppp_landuse <- as.ppp(osm_points.sf$geometry)
 
